@@ -15,7 +15,7 @@ To find the optimal model, a comprehensive testing flow was utilized:
 Our best-performing model was **XGBoost**. Because tree-based ensemble models naturally handle imbalanced data better, we bypassed SMOTE and trained XGBoost on the original data.
 *   **Class Weighting:** We used the `scale_pos_weight` parameter to penalize mistakes on the minority fraud class heavily.
 *   **Hyperparameter Tuning:** We used `RandomizedSearchCV` to fine-tune the model's parameters (max depth, learning rate, estimators, etc.).
-*   **Threshold Tuning:** By lowering the prediction threshold to 0.4, we achieved our optimal result: **86% Recall and 86% Precision**. This provided the best balance, minimizing both missed frauds and false alarms.
+*   **Threshold Tuning:** By lowering the prediction threshold to 0.4, we achieved our optimal result: **86% Recall and 0.879 AUPRC**, along with negligible false positives. This provided the best balance, minimizing both missed frauds and false alarms.
 
 ## Simplified Model (Feature Importance)
 In real-world production environments, inference speed is critical. We extracted the feature importances from our tuned XGBoost model and trained simplified versions using only the Top 5 and Top 10 features.
