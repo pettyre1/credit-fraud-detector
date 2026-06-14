@@ -26,5 +26,5 @@ In real-world production environments, inference speed is critical. We extracted
 To run this notebook yourself:
 1.  Download this repository.
 2.  Open [Google Colab](https://colab.research.google.com/) and upload the `Credit_Card_Fraud.ipynb` notebook.
-3.  Upload the `creditcard.csv` dataset (located in the `data/` directory of this repository) to the root `/content/` directory of your Colab environment.
+3.  Upload the `creditcard.csv` dataset ([download from Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud) - file is too large for GitHub) to the root `/content/` directory of your Colab environment.
 4.  Run the cells sequentially to see the data processing, model training, and evaluation metrics.
